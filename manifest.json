@@ -1,0 +1,22 @@
+{
+  "manifest_version": 2,
+  "name": "Roblox 'Favorites' shortcut",
+  "version": "1.0",
+
+  "description": "Adds a shortcut to your favourites on the Roblox's website left navigation menu.",
+  "homepage_url": "https://github.com/abzXYZ",
+  "icons": {
+    "32": "resources/star.png",
+	"64": "resources/icon.png"
+  },
+  
+  "content_scripts": [
+    {
+      "matches": ["*://www.roblox.com/*"],
+      "js": ["resources/gearbox.js"]
+    }
+  ],
+  "web_accessible_resources": [
+    "resources/star.png"
+  ]
+}
