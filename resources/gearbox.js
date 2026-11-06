@@ -1,16 +1,10 @@
-var user = document.getElementById("nav-profile").href;
-var userid = user.substring(0, user.length - 7);
-var img = browser.runtime.getURL("resources/star.png");
-
-var inventory = document.getElementById("nav-inventory").parentElement;
+var userid = document.head.querySelector("[name~=user-data]").dataset.userid;
+var inventory = document.querySelector("li:has(a[href='https://www.roblox.com/users/inventory'])");
 
 var newli = inventory.cloneNode(true);
 var newa = newli.firstChild;
-newa.id = "nav-favorites";
-newa.href = userid + "favorites#!/";
+newa.href = "https://www.roblox.com/users/" + userid + "/favorites#!/";
 newa.lastChild.textContent = "Favorites";
-newa.firstChild.firstChild.style.backgroundImage = "url('" + img + "')";
-newa.firstChild.firstChild.style.backgroundPosition = "center";
-newa.firstChild.firstChild.style.backgroundSize = "contain";
+newa.querySelector(".icon").className = "icon-favorite";
 
 inventory.parentNode.insertBefore(newli, inventory.nextSibling);
