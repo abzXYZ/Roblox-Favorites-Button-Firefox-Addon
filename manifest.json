@@ -1,9 +1,17 @@
 {
   "manifest_version": 2,
   "name": "Roblox 'Favorites' shortcut",
-  "version": "1.2",
+  "version": "1.2.1",
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "{d87047d6-7348-45c9-a1d1-727a4a0933d6}",
+      "data_collection_permissions": {
+        "required": ["none"]
+      }
+    }
+  },
 
-  "description": "Adds a shortcut to your favourites on the Roblox's website left navigation menu.",
+  "description": "Adds a shortcut to your favorites on the Roblox's website left navigation menu.",
   "homepage_url": "https://github.com/abzXYZ",
   "icons": {
 	"77": "resources/icon.png"
